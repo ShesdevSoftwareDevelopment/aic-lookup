@@ -1,0 +1,28 @@
+{
+  "name": "aic-lookup",
+  "version": "1.0.0",
+  "description": "https://medium.com/geekculture/build-and-deploy-a-web-application-with-react-and-node-js-express-bce2c3cfec32#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImQyNWY4ZGJjZjk3ZGM3ZWM0MDFmMDE3MWZiNmU2YmRhOWVkOWU3OTIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYmYiOjE2Nzc0ODc3NDgsImF1ZCI6IjIxNjI5NjAzNTgzNC1rMWs2cWUwNjBzMnRwMmEyamFtNGxqZGNtczAwc3R0Zy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjEwMjE3NTcyNDE4MjQ3OTU0MjM5OSIsImVtYWlsIjoiZml2ZW1pbnV0ZXMwMDFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF6cCI6IjIxNjI5NjAzNTgzNC1rMWs2cWUwNjBzMnRwMmEyamFtNGxqZGNtczAwc3R0Zy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsIm5hbWUiOiI1TSBTdG9yaWVzIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FHTm15eFpEUmt1NVpBRXJnQy1uV1VwOW9PMm9oMjBETm53OXVyODJaeDN0dG5RPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IjVNIiwiZmFtaWx5X25hbWUiOiJTdG9yaWVzIiwiaWF0IjoxNjc3NDg4MDQ4LCJleHAiOjE2Nzc0OTE2NDgsImp0aSI6ImEzZTQ3ZjliZjBjNDcwNjE0YTliMTA0YzQ4NmMxNDRmN2UwYzRlZTkifQ.I0V4U7cgZVxtJbp_KrZHnZqHNJJh_mheY9QeyNwJ6G8kUjwoXg3_kjHs6rAXIPwmOZkls7ZuzvjBsSQmnRYIKF1LZlNaCC6HuX84Yq1tS45YVBb3NuwJK2wjLCgu4K2EBoTTvokgqf3QerI156TRz2QK56AajpS6nYQaZKihA4H-Qbxjv4Vbg--uTa6WsFNlRZPKwjCpmX5hzl3Sv6AlSFBczIaw8tcDDXVNfuU9l7U-rZ6k7_CdokWc9PQVt5_iKIZ2zGtbqw5wdpe-FiS7VdTvllNktqx9uQtEADc0pybCcJi6VxrfpLouDn4Hb_sT15c9M7Cedyp6TqKZX9lMiA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShesdevSoftwareDevelopment/aic-lookup.git"
+  },
+  "keywords": [
+    "react-node-express"
+  ],
+  "author": "shesdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShesdevSoftwareDevelopment/aic-lookup/issues"
+  },
+  "homepage": "https://github.com/ShesdevSoftwareDevelopment/aic-lookup#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.15.0"
+  }
+}
