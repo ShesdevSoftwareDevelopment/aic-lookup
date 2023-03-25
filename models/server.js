@@ -22,13 +22,16 @@ class Server {
 
   // Bind controllers to routes
   routes() {
-    // this.app.use(this.paths.default, require("../routes/auth"));
-    // this.app.use(this.paths.auth, require("../routes/auth"));
-    // this.app.use(this.paths.homepage, require("../routes/homepage"));
+    this.app.use(this.paths.default, require("../routes/auth"));
+    this.app.use(this.paths.auth, require("../routes/auth"));
+    this.app.use(this.paths.homepage, require("../routes/homepage"));
     this.app.use(express.static(path.join(__dirname, 'build')));
     this.app.get('/', function (req, res) {
       res.sendFile(path.join(__dirname, 'build', 'index.html'));
     });
+    this.app.use((req, res, next) => {
+      res.status(404).send("Sorry can't find that!");
+    })
   }
 
   listen() {
