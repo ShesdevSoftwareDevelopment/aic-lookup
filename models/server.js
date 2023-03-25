@@ -25,12 +25,12 @@ class Server {
     this.app.use(this.paths.default, require("../routes/auth"));
     this.app.use(this.paths.auth, require("../routes/auth"));
     this.app.use(this.paths.homepage, require("../routes/homepage"));
+    this.app.use(express.static(path.join(__dirname, 'build')));
+    this.app.get('/*', function (req, res) {
+      res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    });
   }
 
-  this.app.use(express.static(path.join(__dirname, 'build')));
-this.app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
   listen() {
     this.app.listen(this.port, () => {
       console.log("Server running on port: ", this.port);
