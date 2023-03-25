@@ -1,7 +1,5 @@
 export async function login({ email, password }) {
-  let host = window.location.host;
-  host = host.replace('3000', '8080'); // Replace port 3000 with 8080 (for local dev vs. prod)
-  return await fetch(`${host}/api/auth/login`, {
+  return await fetch("/api/auth/login", {
     method: "POST",
     body: JSON.stringify({ email, password }),
     headers: { "Content-Type": "application/json" },
