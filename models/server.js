@@ -5,7 +5,7 @@ const path = require("path");
 class Server {
   constructor() {
     this.app = express();
-    this.port = process.env.PORT; // Loaded from .env file
+    this.port = process.env.PORT || 8080; // Loaded from .env file
     this.paths = {
       default: "/",
       auth: "/api/auth",
@@ -25,6 +25,13 @@ class Server {
     this.app.use(this.paths.default, require("../routes/auth"));
     this.app.use(this.paths.auth, require("../routes/auth"));
     this.app.use(this.paths.homepage, require("../routes/homepage"));
+
+    const root = require('path').join(__dirname, '../client/build');
+    this.app.use(express.static(root));
+
+    this.app.use('/*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+    });
   }
 
   listen() {
