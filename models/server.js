@@ -27,6 +27,10 @@ class Server {
     this.app.use(this.paths.homepage, require("../routes/homepage"));
   }
 
+  app.use(express.static(path.join(__dirname, 'build')));
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
   listen() {
     this.app.listen(this.port, () => {
       console.log("Server running on port: ", this.port);
