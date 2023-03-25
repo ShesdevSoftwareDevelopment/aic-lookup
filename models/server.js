@@ -7,6 +7,7 @@ class Server {
     this.app = express();
     this.port = process.env.PORT; // Loaded from .env file
     this.paths = {
+      default: "/",
       auth: "/api/auth",
       homepage: "/api/homepage",
     };
@@ -21,6 +22,7 @@ class Server {
 
   // Bind controllers to routes
   routes() {
+    this.app.use(this.paths.default, require("../routes/auth"));
     this.app.use(this.paths.auth, require("../routes/auth"));
     this.app.use(this.paths.homepage, require("../routes/homepage"));
   }
