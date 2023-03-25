@@ -32,6 +32,9 @@ class Server {
     this.app.use((req, res, next) => {
       res.status(404).send("Sorry can't find that!");
     })
+    this.app.all('*', (req, res) => {
+      res.status(404).send('<h1>404! Page not found</h1>');
+    });
   }
 
   listen() {
